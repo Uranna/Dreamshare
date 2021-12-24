@@ -1,0 +1,18 @@
+{
+  "name": "dreamshare",
+  "version": "1.0.0",
+  "description": "Тестовое задание по верстке + БЭМ",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Urakova Anna <gram_anna@mail.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {}
+}
