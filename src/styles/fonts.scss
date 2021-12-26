@@ -1,0 +1,25 @@
+@import './vars.scss';
+
+@font-face {
+	font-family: $font-roboto;
+	src: url('fonts/Roboto.eot');
+	src: local('☺'), url('fonts/Roboto.woff') format('woff'), url('fonts/Roboto.ttf') format('truetype'), url('fonts/Roboto.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $font-montserrat-regular;
+	src: url('fonts/Montserrat Regular.eot');
+	src: local('☺'), url('fonts/Montserrat Regular.woff') format('woff'), url('fonts/Montserrat Regular.ttf') format('truetype'), url('fonts/Montserrat Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $font-montserrat-bold;
+	src: url('fonts/MotserratBold.eot');
+	src: local('☺'), url('fonts/MotserratBold.woff') format('woff'), url('fonts/MotserratBold.ttf') format('truetype'), url('fonts/MotserratBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
