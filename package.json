@@ -5,8 +5,7 @@
   "main": "index.js",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel"
   },
   "author": "Urakova Anna <gram_anna@mail.ru>",
   "license": "ISC",

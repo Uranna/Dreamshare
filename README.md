@@ -17,8 +17,3 @@ npm intall
 ```
 npm run start
 ```
-
-Для сборки проекта используйте команду
-```
-npm run build
-```

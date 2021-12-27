@@ -62,9 +62,9 @@
 
 @media (max-width: $tablet) {
   .main-page__list {
-    &--step {
+    // &--step {
 
-    }
+    // }
 
     &--person {
       grid-template-columns: repeat(2, 21rem);
@@ -295,6 +295,7 @@
     border: solid 1px $border-input;
     background-color: $white;
     outline: none;
+    font-size: 1.4rem;
 
     &:hover:not(.send-info__input--error) {
       border-color: $light-txt;
