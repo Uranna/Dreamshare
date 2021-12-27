@@ -30,6 +30,7 @@ ol {
 
 a {
   text-decoration: none;
+  color:inherit;
 }
 
 input,
@@ -37,4 +38,9 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }

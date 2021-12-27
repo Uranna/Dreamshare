@@ -1,0 +1,67 @@
+@import './vars.scss';
+
+.btn {
+  background: none;
+  border-radius: 2rem;
+  color: $white;
+  // font: 14px $font-montserrat-bold;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &__nav {
+    padding: 10px 15px 8px 15px;
+
+    &--sign {
+      border-radius: 18px;
+      border: 2px solid  $white;
+      line-height: 1;
+
+      &:hover {
+        background: rgba($color: $white, $alpha: 0.2);
+      }
+      &:active {
+        background: rgba($color: $white, $alpha: 0.4);
+      }
+    }
+  }
+
+  &--red {
+    background: $red;
+    padding: 10px 19px 12px;
+    border: 1px solid transparent;
+    
+
+    &:hover {
+      background-color: darken($color: $red, $amount: 5%);
+      border: 1px solid $white;
+    }
+
+    &:active {
+      background-color: darken($color: $red, $amount: 10%);
+    }
+  }
+
+  &--inverse-red {
+    background: $white;
+    color:$red;
+    border: 2px solid $red;
+    padding: 14px 28px 12px 27px;
+
+    &:hover {
+      background: $red;
+      color: $white;
+    }
+
+    &:active {
+      background: darken($color: $red, $amount: 5%);
+    }
+  }
+
+  &--center {
+    display: block;
+    margin:auto;
+  }
+}
