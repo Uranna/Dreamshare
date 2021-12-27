@@ -19,3 +19,7 @@ npm intall
 ```
 npm run start
 ```
+Для сборки проекта используйте
+```
+npm run build
+```
