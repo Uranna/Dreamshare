@@ -16,7 +16,7 @@
     max-width: 98.2rem;
     width: 100%;
     margin: auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   &__content {
@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 13.9rem;
+    
   }
 
   &__title {
@@ -38,17 +38,21 @@
     letter-spacing: normal;
     text-align: center;
     margin-bottom: 2.3rem;
+    animation: animateText 1s ease-out;
   }
 
   &__description {
     font-size: 2.4rem;
     margin-bottom: 3.5rem;
     text-align: center;
+    font-weight: 300;
+    animation: animateText 1s 500ms ease-out backwards;
   }
 }
 
 .nav {
-  padding-top: 3.8rem;
+
+  padding: 3.8rem 2.5rem 13.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,6 +64,13 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: $mobile) {
@@ -69,19 +80,34 @@
 
     &__title {
       font-size: 3rem;
+      animation: animateText 1500ms 500ms ease-out backwards;
     }
 
     &__description {
       font-size: 1.8rem;
       max-width: 21.7rem;
+      animation: animateText 1500ms 1s ease-out backwards;
+
     }
   }
 
   .nav {
-    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 2rem 0 0;
+    margin-bottom: 3.8rem;
+    height: 19.1rem;
 
     &__logo {
-      display: none;
+      animation: animateText 1500ms ease-out;
     }
+  }
+}
+
+@keyframes animateText {
+  0% {
+    color: transparent;
+  } 
+  100% {
+    color: $white;
   }
 }

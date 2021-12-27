@@ -4,7 +4,7 @@
   border-bottom: 4px solid $red;
 
   &__container {
-    max-width: 96rem;
+    max-width: $main;
     width: 100%;
     margin: auto;
     padding: 0 1rem;
@@ -14,7 +14,7 @@
     margin: 9.8rem auto;
 
     @media (max-width: $mobile) {
-      margin: 4rem auto;
+      margin: 3.8rem auto;
     }
   }
 
@@ -22,7 +22,8 @@
     font-size: 22px;
     text-align: center;
     color: $txt;
-    margin-bottom:3.9rem;
+    margin-bottom: 3.9rem;
+    line-height: normal;
 
     @media (max-width: $mobile) {
       margin-bottom: 1.9rem;
@@ -60,31 +61,45 @@
   }
 }
 
-@media (max-width: $tablet) {
+/* медиа запросы общих блоков*/
+
+@media (max-width: $main) {
   .main-page__list {
-    // &--step {
-
-    // }
-
     &--person {
-      grid-template-columns: repeat(2, 21rem);
+      grid-template-columns: repeat(2, minmax(auto, 21.7rem));
+      grid-column-gap: 5%;
     }
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet) {
   .main-page__list {
     &--step {
       grid-template-columns: 1fr;
       grid-row-gap: 2rem;
     }
+  }
+
+  .main-page__item {
+    height: 23.8rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .main-page__title {
+    padding: 0 1rem;
+  }
+
+  .main-page__list {
+    &--step {
+      grid-template-columns: 1fr;
+      grid-row-gap: 1rem;
+    }
 
     &--person {
-      grid-template-columns: 21rem;
-
-      .card-step {
-        height: 23.8rem;
-      }
+      grid-template-columns: 21.7rem;
+      grid-row-gap: 2.9rem;
+      margin-bottom: 2.9rem;
     }
   }
 }
@@ -109,19 +124,20 @@
   }
 
   &__badges {
+    font-size: 1rem;
     background: $red;
     text-transform: uppercase;
     display: inline;
     padding: 0.7rem 1.4rem;
-    font-size: 10px;
     letter-spacing: 2px;
   }
 
   &__title {
-    margin: 19px 0 18px ;
+    margin: 2.6rem 0 1.8rem ;
     font-size: 24px;
     font-stretch: normal;
     color: $white;
+    line-height: normal;
   }
 
   &__description {
@@ -129,6 +145,8 @@
     font-size: 14px;
     color: #ccc;
   }
+
+
 }
 
 .card-person {
@@ -161,8 +179,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3.6rem;
+    height: 3.6rem;
     border: 4px solid $white;
     border-radius: 50%;
     display: flex;
@@ -188,10 +206,10 @@
       background: $blue;
       &::before {
         content: url('./images/icon-4.svg');
-        position: absolute;
-        top: 4px;
-        left: 2px;
-      }
+        position: relative;
+        top: 1px;
+        right: 1px;
+        }
     }
 
     &--yellow {
@@ -231,6 +249,9 @@
     align-items: center;
     position: relative;
     height: 31rem;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
 
     &--big {
       grid-column: span 2;
@@ -255,6 +276,7 @@
 @media(max-width: $mobile) {
   .gallery {
     grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
 
     &__box {
       height: 12rem;
@@ -262,6 +284,10 @@
       &--big {
         grid-column: span 1;
       }
+    }
+
+    &__photo--top {
+      object-position: center 20%;
     }
   }
 }
@@ -283,7 +309,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+  }
 
+  &__bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    &--active {
+      display: block;
+    }
   }
 
   &__input {
@@ -296,6 +335,7 @@
     background-color: $white;
     outline: none;
     font-size: 1.4rem;
+    z-index: 1;
 
     &:hover:not(.send-info__input--error) {
       border-color: $light-txt;
@@ -309,6 +349,11 @@
 
 @media (max-width: $mobile) {
   .send-info {
+
+    &__label {
+      margin-bottom: 1.6rem;
+    }
+
     &__answer-field {
       flex-direction: column;
     }
@@ -316,6 +361,7 @@
     &__input {
       width: 100%;
       margin-bottom: 1rem;
+      margin-right: 0;
     }
   } 
 }
