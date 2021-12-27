@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url ./Dreamshare/ --no-content-hash"
+    "build": "parcel build --public-url ./ --no-content-hash"
   },
   "author": "Urakova Anna <gram_anna@mail.ru>",
   "license": "ISC",
