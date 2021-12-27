@@ -2,10 +2,10 @@
   "name": "dreamshare",
   "version": "1.0.0",
   "description": "Тестовое задание по верстке + БЭМ",
-  "main": "index.js",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel"
+    "start": "parcel",
+    "build": "parcel build --public-url ./Dreamshare/ --no-content-hash"
   },
   "author": "Urakova Anna <gram_anna@mail.ru>",
   "license": "ISC",
